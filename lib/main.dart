@@ -129,7 +129,6 @@ class _MainHomePageState extends State<MainHomePage> {
     try {
       await launchUrl(iosUrl);
     } catch (e) {
-      print(e);
       ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
         content: Text(
           "링크가 열리지 않습니다.",
