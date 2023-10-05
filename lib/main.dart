@@ -10,7 +10,8 @@ import 'package:hayat_onldocc_homepage/widgets/service_intro.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 void main() async {
-  await dotenv.load(fileName: "assets/config/.env");
+  WidgetsFlutterBinding.ensureInitialized();
+  await dotenv.load(fileName: "assets/config/dotenv");
   runApp(const MyApp());
 }
 
