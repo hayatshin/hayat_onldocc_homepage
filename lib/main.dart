@@ -13,6 +13,7 @@ import 'package:hayat_onldocc_homepage/widgets/service_intro.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
   await dotenv.load(fileName: ".env");
   runApp(const MyApp());
 }
