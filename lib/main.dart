@@ -1,11 +1,8 @@
 import 'dart:async';
-import 'dart:ui';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:hayat_onldocc_homepage/model/today_diary_model.dart';
 import 'package:hayat_onldocc_homepage/widgets/app_intro.dart';
 import 'package:hayat_onldocc_homepage/widgets/contract.dart';
 import 'package:hayat_onldocc_homepage/widgets/footer.dart';
