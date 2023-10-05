@@ -10,7 +10,7 @@ import 'package:hayat_onldocc_homepage/widgets/service_intro.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 void main() async {
-  await dotenv.load(fileName: "assets/.env");
+  await dotenv.load(fileName: ".env");
   runApp(const MyApp());
 }
 
