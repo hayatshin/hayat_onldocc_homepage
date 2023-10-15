@@ -42,7 +42,7 @@ class MyApp extends StatelessWidget {
         }
         return null;
       },
-      title: '하야트 | 오늘도청춘',
+      title: '하야트 | 인지케어',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         fontFamily: "NanumSquare",
@@ -186,7 +186,7 @@ class _MainHomePageState extends State<MainHomePage> {
                               });
                             },
                             child: Text(
-                              "오늘도청춘",
+                              "인지케어",
                               style: TextStyle(
                                 fontSize: 10,
                                 fontWeight: _hoverTabNavInt == 0
@@ -320,7 +320,7 @@ class _MainHomePageState extends State<MainHomePage> {
                               });
                             },
                             child: Text(
-                              "오늘도청춘",
+                              "인지케어",
                               style: TextStyle(
                                 fontSize: 20,
                                 fontWeight: _hoverTabNavInt == 0

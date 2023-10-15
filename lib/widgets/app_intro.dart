@@ -274,7 +274,7 @@ class _AppIntroState extends State<AppIntro> {
                                       ),
                                     ),
                                     TextSpan(
-                                      text: "AI 기술\n\n오늘도청춘으로\n아주 쉽게 접근하고\n",
+                                      text: "AI 기술\n인지케어로\n아주 쉽게 접근하고\n",
                                     ),
                                     TextSpan(
                                       text: "음성",
@@ -858,7 +858,7 @@ class _AppIntroState extends State<AppIntro> {
                                       ),
                                     ),
                                     TextSpan(
-                                      text: "AI 기술\n\n오늘도청춘으로\n아주 쉽게 접근하고\n",
+                                      text: "AI 기술\n\n인지케어로\n아주 쉽게 접근하고\n",
                                     ),
                                     TextSpan(
                                       text: "음성",

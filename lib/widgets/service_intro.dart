@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -39,7 +38,7 @@ class _ServiceIntroState extends State<ServiceIntro> {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Text(
-                  "오늘도청춘 이란?",
+                  "인지케어 란?",
                   style: TextStyle(
                     fontSize: 12,
                     fontWeight: FontWeight.w600,
@@ -375,7 +374,7 @@ class _ServiceIntroState extends State<ServiceIntro> {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Text(
-                  "오늘도청춘 이란?",
+                  "인지케어 란?",
                   style: TextStyle(
                     fontSize: 25,
                     fontWeight: FontWeight.w600,

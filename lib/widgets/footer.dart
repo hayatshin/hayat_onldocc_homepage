@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:hayat_onldocc_homepage/main.dart';
@@ -76,7 +75,7 @@ class Footer extends StatelessWidget {
                         child: Padding(
                           padding: const EdgeInsets.all(10),
                           child: Image.asset(
-                            "assets/icons/icon_1024.png",
+                            "assets/icons/icon_line.png",
                             fit: BoxFit.cover,
                           ),
                         ),
@@ -88,7 +87,7 @@ class Footer extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
-                            "오늘도청춘",
+                            "인지케어",
                             style: TextStyle(
                                 color: Colors.white,
                                 fontSize: 15,
@@ -324,7 +323,7 @@ class Footer extends StatelessWidget {
                         child: Padding(
                           padding: const EdgeInsets.all(20),
                           child: Image.asset(
-                            "assets/icons/icon_1024.png",
+                            "assets/icons/icon_line.png",
                             fit: BoxFit.cover,
                           ),
                         ),
@@ -336,7 +335,7 @@ class Footer extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
-                            "오늘도청춘",
+                            "인지케어",
                             style: TextStyle(
                                 color: Colors.white,
                                 fontSize: 50,
