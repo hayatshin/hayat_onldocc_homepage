@@ -451,7 +451,7 @@ class Footer extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       const Text(
-                        "주식회사 하야트",
+                        "(주)하야트",
                         style: TextStyle(
                           fontSize: 18,
                           fontWeight: FontWeight.w600,
