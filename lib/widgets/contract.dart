@@ -149,7 +149,7 @@ class _ContractState extends State<Contract> {
                         const Text(
                           "계약 문의를 진행해주세요.",
                           style: TextStyle(
-                            fontSize: 15,
+                            fontSize: 40,
                             fontWeight: FontWeight.w800,
                             color: Color(0xff081C37),
                           ),
@@ -160,7 +160,7 @@ class _ContractState extends State<Contract> {
                         const Text(
                           "아래 내용을 남겨주시면 하야트 고객센터에서 순차적으로 연락드리겠습니다.",
                           style: TextStyle(
-                            fontSize: 10,
+                            fontSize: 14,
                             fontWeight: FontWeight.w600,
                           ),
                         ),

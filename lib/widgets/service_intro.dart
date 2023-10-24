@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -13,9 +15,26 @@ class ServiceIntro extends StatefulWidget {
 
 class _ServiceIntroState extends State<ServiceIntro> {
   final PageController _todayDiaryController = PageController(initialPage: 0);
+  late Timer _timer;
+  int _currentPage = 0;
+  final int _totalPage = 4;
+
   @override
   void initState() {
     super.initState();
+    _timer = Timer.periodic(const Duration(seconds: 4), (timer) {
+      if (_currentPage < _totalPage - 1) {
+        _currentPage++;
+      } else {
+        _currentPage = 0;
+      }
+
+      _todayDiaryController.animateToPage(
+        _currentPage,
+        duration: const Duration(seconds: 2),
+        curve: Curves.ease,
+      );
+    });
   }
 
   @override
@@ -40,7 +59,7 @@ class _ServiceIntroState extends State<ServiceIntro> {
                 Text(
                   "인지케어 란?",
                   style: TextStyle(
-                    fontSize: 12,
+                    fontSize: 15,
                     fontWeight: FontWeight.w600,
                     color: Colors.grey.shade800,
                   ),
@@ -55,7 +74,7 @@ class _ServiceIntroState extends State<ServiceIntro> {
                   child: const Text(
                     "사용하기 어렵고 혼자 하는 치매 예방은 이제 그만!",
                     style: TextStyle(
-                      fontSize: 14,
+                      fontSize: 18,
                       fontWeight: FontWeight.w300,
                     ),
                   ),
@@ -66,7 +85,7 @@ class _ServiceIntroState extends State<ServiceIntro> {
                 const Text(
                   "시니어 분들이 하루 한번! 단 5분!",
                   style: TextStyle(
-                    fontSize: 14,
+                    fontSize: 18,
                     fontWeight: FontWeight.w800,
                   ),
                 ),
@@ -78,16 +97,16 @@ class _ServiceIntroState extends State<ServiceIntro> {
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     height: 1.5,
-                    fontSize: 14,
+                    fontSize: 18,
                     fontWeight: FontWeight.w800,
                   ),
                 ),
                 const SizedBox(
-                  height: 40,
+                  height: 60,
                 ),
                 Padding(
                   padding: const EdgeInsets.symmetric(
-                    horizontal: 30,
+                    horizontal: 20,
                   ),
                   child: SingleChildScrollView(
                     scrollDirection: Axis.horizontal,
@@ -96,6 +115,9 @@ class _ServiceIntroState extends State<ServiceIntro> {
                       children: [
                         GestureDetector(
                           onTap: () {
+                            setState(() {
+                              _currentPage = 0;
+                            });
                             _todayDiaryController.animateToPage(
                               0,
                               duration: const Duration(seconds: 2),
@@ -105,8 +127,8 @@ class _ServiceIntroState extends State<ServiceIntro> {
                           child: MouseRegion(
                             cursor: SystemMouseCursors.click,
                             child: Container(
-                              width: 65,
-                              height: 65,
+                              width: 75,
+                              height: 75,
                               decoration: BoxDecoration(
                                 color: Colors.blueAccent.withOpacity(0.05),
                                 borderRadius: BorderRadius.circular(10),
@@ -127,7 +149,7 @@ class _ServiceIntroState extends State<ServiceIntro> {
                                     const Text(
                                       "신체 건강 관리",
                                       style: TextStyle(
-                                        fontSize: 6,
+                                        fontSize: 8,
                                         fontWeight: FontWeight.w600,
                                       ),
                                     ),
@@ -142,6 +164,9 @@ class _ServiceIntroState extends State<ServiceIntro> {
                         ),
                         GestureDetector(
                           onTap: () {
+                            setState(() {
+                              _currentPage = 1;
+                            });
                             _todayDiaryController.animateToPage(
                               1,
                               duration: const Duration(seconds: 2),
@@ -151,8 +176,8 @@ class _ServiceIntroState extends State<ServiceIntro> {
                           child: MouseRegion(
                             cursor: SystemMouseCursors.click,
                             child: Container(
-                              width: 65,
-                              height: 65,
+                              width: 75,
+                              height: 75,
                               decoration: BoxDecoration(
                                 color: Colors.pinkAccent.withOpacity(0.05),
                                 borderRadius: BorderRadius.circular(10),
@@ -173,7 +198,7 @@ class _ServiceIntroState extends State<ServiceIntro> {
                                     const Text(
                                       "인지 건강 관리",
                                       style: TextStyle(
-                                        fontSize: 6,
+                                        fontSize: 8,
                                         fontWeight: FontWeight.w600,
                                       ),
                                     ),
@@ -188,6 +213,9 @@ class _ServiceIntroState extends State<ServiceIntro> {
                         ),
                         GestureDetector(
                           onTap: () {
+                            setState(() {
+                              _currentPage = 2;
+                            });
                             _todayDiaryController.animateToPage(
                               2,
                               duration: const Duration(seconds: 2),
@@ -197,8 +225,8 @@ class _ServiceIntroState extends State<ServiceIntro> {
                           child: MouseRegion(
                             cursor: SystemMouseCursors.click,
                             child: Container(
-                              width: 65,
-                              height: 65,
+                              width: 75,
+                              height: 75,
                               decoration: BoxDecoration(
                                 color: Colors.greenAccent.withOpacity(0.05),
                                 borderRadius: BorderRadius.circular(10),
@@ -219,7 +247,7 @@ class _ServiceIntroState extends State<ServiceIntro> {
                                     const Text(
                                       "정신 건강 관리",
                                       style: TextStyle(
-                                        fontSize: 6,
+                                        fontSize: 8,
                                         fontWeight: FontWeight.w600,
                                       ),
                                     ),
@@ -234,6 +262,9 @@ class _ServiceIntroState extends State<ServiceIntro> {
                         ),
                         GestureDetector(
                           onTap: () {
+                            setState(() {
+                              _currentPage = 3;
+                            });
                             _todayDiaryController.animateToPage(
                               3,
                               duration: const Duration(seconds: 2),
@@ -243,8 +274,8 @@ class _ServiceIntroState extends State<ServiceIntro> {
                           child: MouseRegion(
                             cursor: SystemMouseCursors.click,
                             child: Container(
-                              width: 65,
-                              height: 65,
+                              width: 75,
+                              height: 75,
                               decoration: BoxDecoration(
                                 color: Colors.purpleAccent.withOpacity(0.05),
                                 borderRadius: BorderRadius.circular(10),
@@ -265,7 +296,7 @@ class _ServiceIntroState extends State<ServiceIntro> {
                                     const Text(
                                       "사고 능력 관리",
                                       style: TextStyle(
-                                        fontSize: 6,
+                                        fontSize: 8,
                                         fontWeight: FontWeight.w600,
                                       ),
                                     ),
@@ -281,7 +312,7 @@ class _ServiceIntroState extends State<ServiceIntro> {
                 ),
                 // today_diary
                 const SizedBox(
-                  height: 30,
+                  height: 60,
                 ),
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 30),
@@ -297,7 +328,7 @@ class _ServiceIntroState extends State<ServiceIntro> {
                       Expanded(
                         child: Center(
                           child: SizedBox(
-                            height: 150,
+                            height: 250,
                             child: PageView.builder(
                               itemCount: 4,
                               controller: _todayDiaryController,

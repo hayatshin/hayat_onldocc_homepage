@@ -38,7 +38,7 @@ class _AppIntroState extends State<AppIntro> {
                   Text(
                     "앱 자세히 보기",
                     style: TextStyle(
-                      fontSize: 12,
+                      fontSize: 15,
                       fontWeight: FontWeight.w600,
                       color: Colors.grey.shade800,
                     ),
@@ -99,11 +99,12 @@ class _AppIntroState extends State<AppIntro> {
                                     child: Text(
                                       "AI 채팅\n기능 보기",
                                       style: TextStyle(
-                                          fontWeight: FontWeight.w800,
-                                          fontSize: 8,
-                                          color: _selectedAppDetailIndex == 0
-                                              ? Colors.white
-                                              : Colors.black),
+                                        fontWeight: FontWeight.w800,
+                                        fontSize: 12,
+                                        color: _selectedAppDetailIndex == 0
+                                            ? Colors.white
+                                            : Colors.black,
+                                      ),
                                     ),
                                   ),
                                 ),
@@ -158,7 +159,7 @@ class _AppIntroState extends State<AppIntro> {
                                       "일기 활용\n서비스 보기",
                                       style: TextStyle(
                                           fontWeight: FontWeight.w800,
-                                          fontSize: 8,
+                                          fontSize: 12,
                                           color: _selectedAppDetailIndex == 1
                                               ? Colors.white
                                               : Colors.black),
@@ -219,7 +220,7 @@ class _AppIntroState extends State<AppIntro> {
                                     child: Text(
                                       "사업자 제공\n서비스 보기",
                                       style: TextStyle(
-                                          fontSize: 8,
+                                          fontSize: 12,
                                           fontWeight: FontWeight.w800,
                                           color: _hoverAppDetailIndex == 2
                                               ? Colors.white
@@ -236,7 +237,7 @@ class _AppIntroState extends State<AppIntro> {
                   ),
 
                   const SizedBox(
-                    height: 30,
+                    height: 60,
                   ),
                   // app_detail
                   Visibility(
@@ -263,7 +264,7 @@ class _AppIntroState extends State<AppIntro> {
                                 text: const TextSpan(
                                   text: "시니어들은\n접근하기 어려운\n",
                                   style: TextStyle(
-                                    fontSize: 8,
+                                    fontSize: 12,
                                     fontWeight: FontWeight.w400,
                                   ),
                                   children: [
@@ -299,7 +300,7 @@ class _AppIntroState extends State<AppIntro> {
                                   "질문을 통한 유익한 정보 획득,\n대화를 통한 외로움 해소까지!",
                                   style: TextStyle(
                                     fontWeight: FontWeight.w900,
-                                    fontSize: 8,
+                                    fontSize: 12,
                                   ),
                                 ),
                               ),
@@ -326,16 +327,16 @@ class _AppIntroState extends State<AppIntro> {
                                     style: TextStyle(
                                       color: Theme.of(context).primaryColor,
                                       fontWeight: FontWeight.w900,
-                                      fontSize: 8,
+                                      fontSize: 10,
                                     ),
                                   ),
                                   const SizedBox(
-                                    height: 10,
+                                    height: 20,
                                   ),
                                   RichText(
                                     text: const TextSpan(
                                       text: "시니어의 오늘 ",
-                                      style: TextStyle(fontSize: 8),
+                                      style: TextStyle(fontSize: 12),
                                       children: [
                                         TextSpan(
                                           text: "4가지 활동",
@@ -359,14 +360,14 @@ class _AppIntroState extends State<AppIntro> {
                                     ),
                                   ),
                                   const SizedBox(
-                                    height: 20,
+                                    height: 30,
                                   ),
                                   Row(
                                     mainAxisAlignment:
                                         MainAxisAlignment.spaceBetween,
                                     children: [
                                       SizedBox(
-                                        height: 100,
+                                        height: 150,
                                         child: Image.asset(
                                           "assets/service_detail/feedback1.png",
                                         ),
@@ -378,7 +379,7 @@ class _AppIntroState extends State<AppIntro> {
                                         width: 10,
                                       ),
                                       SizedBox(
-                                        height: 100,
+                                        height: 150,
                                         child: Image.asset(
                                           "assets/service_detail/feedback2.png",
                                         ),
@@ -390,7 +391,7 @@ class _AppIntroState extends State<AppIntro> {
                                         width: 10,
                                       ),
                                       SizedBox(
-                                        height: 100,
+                                        height: 150,
                                         child: Image.asset(
                                           "assets/service_detail/feedback3.png",
                                         ),
@@ -402,7 +403,7 @@ class _AppIntroState extends State<AppIntro> {
                                         width: 10,
                                       ),
                                       SizedBox(
-                                        height: 100,
+                                        height: 150,
                                         child: Image.asset(
                                           "assets/service_detail/feedback4.png",
                                         ),
@@ -417,7 +418,7 @@ class _AppIntroState extends State<AppIntro> {
                             ],
                           ),
                           const SizedBox(
-                            height: 20,
+                            height: 60,
                           ),
                           Column(
                             crossAxisAlignment: CrossAxisAlignment.center,
@@ -427,14 +428,14 @@ class _AppIntroState extends State<AppIntro> {
                                 style: TextStyle(
                                   color: Theme.of(context).primaryColor,
                                   fontWeight: FontWeight.w900,
-                                  fontSize: 8,
+                                  fontSize: 10,
                                 ),
                               ),
                               const SizedBox(
-                                height: 20,
+                                height: 30,
                               ),
                               SizedBox(
-                                height: 100,
+                                height: 150,
                                 child: SingleChildScrollView(
                                   scrollDirection: Axis.horizontal,
                                   child: Row(
@@ -455,7 +456,7 @@ class _AppIntroState extends State<AppIntro> {
                                           ),
                                           const Text(
                                             "나와 다른 사람을\n알아가고,\n현재의 나에 대해\n알릴 수 있어요.",
-                                            style: TextStyle(fontSize: 8),
+                                            style: TextStyle(fontSize: 12),
                                           ),
                                         ],
                                       ),
@@ -471,7 +472,7 @@ class _AppIntroState extends State<AppIntro> {
                                           ),
                                           const Text(
                                             "모든 활동에 점수를 부여해서\n순위 경쟁을 통한\n재미를 느껴요.",
-                                            style: TextStyle(fontSize: 8),
+                                            style: TextStyle(fontSize: 12),
                                           ),
                                         ],
                                       ),
@@ -480,7 +481,7 @@ class _AppIntroState extends State<AppIntro> {
                                 ),
                               ),
                               const SizedBox(
-                                height: 20,
+                                height: 60,
                               ),
                               Column(
                                 children: [
@@ -489,16 +490,16 @@ class _AppIntroState extends State<AppIntro> {
                                     style: TextStyle(
                                       color: Theme.of(context).primaryColor,
                                       fontWeight: FontWeight.w900,
-                                      fontSize: 8,
+                                      fontSize: 10,
                                     ),
                                   ),
                                   const SizedBox(
-                                    height: 10,
+                                    height: 20,
                                   ),
                                   RichText(
                                     text: const TextSpan(
                                       text: "여러가지 ",
-                                      style: TextStyle(fontSize: 8),
+                                      style: TextStyle(fontSize: 12),
                                       children: [
                                         TextSpan(
                                           text: "시니어 행사",
@@ -519,7 +520,7 @@ class _AppIntroState extends State<AppIntro> {
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     children: [
                                       SizedBox(
-                                        height: 100,
+                                        height: 150,
                                         child: Image.asset(
                                           "assets/service_detail/event1.png",
                                         ),
@@ -533,7 +534,7 @@ class _AppIntroState extends State<AppIntro> {
                                         width: 10,
                                       ),
                                       SizedBox(
-                                        height: 100,
+                                        height: 150,
                                         child: Image.asset(
                                           "assets/service_detail/event2.png",
                                         ),
@@ -561,7 +562,7 @@ class _AppIntroState extends State<AppIntro> {
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
                           SizedBox(
-                            width: size.width * 0.5,
+                            width: size.width * 0.6,
                             child: Image.asset(
                               "assets/service_detail/admin.png",
                             ),
@@ -570,12 +571,12 @@ class _AppIntroState extends State<AppIntro> {
                                 duration: 1.seconds,
                               ),
                           const SizedBox(
-                            height: 20,
+                            height: 30,
                           ),
                           RichText(
                             text: const TextSpan(
                               text: "지역 주민간 대인 관계가 활성화 되고,\n",
-                              style: TextStyle(fontSize: 8),
+                              style: TextStyle(fontSize: 14),
                               children: [
                                 TextSpan(
                                   text: "다양한 지역 행사",

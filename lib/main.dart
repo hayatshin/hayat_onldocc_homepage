@@ -143,12 +143,14 @@ class _MainHomePageState extends State<MainHomePage> {
     final size = MediaQuery.of(context).size;
     return Scaffold(
       appBar: AppBar(
-        toolbarHeight: 80,
+        toolbarHeight: 110,
         title: LayoutBuilder(
           builder: (context, constraints) {
             if (constraints.maxWidth < phoneWidth) {
+              // 핸드폰
               return Padding(
                 padding: const EdgeInsets.only(
+                  top: 20,
                   bottom: 20,
                 ),
                 child: Column(
@@ -188,7 +190,7 @@ class _MainHomePageState extends State<MainHomePage> {
                             child: Text(
                               "인지케어",
                               style: TextStyle(
-                                fontSize: 10,
+                                fontSize: 18,
                                 fontWeight: _hoverTabNavInt == 0
                                     ? FontWeight.w800
                                     : FontWeight.w400,
@@ -216,7 +218,7 @@ class _MainHomePageState extends State<MainHomePage> {
                             child: Text(
                               "서비스 소개",
                               style: TextStyle(
-                                fontSize: 10,
+                                fontSize: 18,
                                 fontWeight: _hoverTabNavInt == 1
                                     ? FontWeight.w800
                                     : FontWeight.w400,
@@ -244,7 +246,7 @@ class _MainHomePageState extends State<MainHomePage> {
                             child: Text(
                               "앱 소개",
                               style: TextStyle(
-                                fontSize: 10,
+                                fontSize: 18,
                                 fontWeight: _hoverTabNavInt == 2
                                     ? FontWeight.w800
                                     : FontWeight.w400,
@@ -274,11 +276,10 @@ class _MainHomePageState extends State<MainHomePage> {
                             child: Text(
                               "계약 문의",
                               style: TextStyle(
-                                fontSize: 10,
-                                color: _hoverTabNavInt == 3
-                                    ? Colors.white
-                                    : Colors.black,
-                                fontWeight: FontWeight.w400,
+                                fontSize: 18,
+                                fontWeight: _hoverTabNavInt == 3
+                                    ? FontWeight.w800
+                                    : FontWeight.w400,
                               ),
                             ),
                           ),
@@ -459,15 +460,15 @@ class _MainHomePageState extends State<MainHomePage> {
                           ),
                       child: Padding(
                         padding: const EdgeInsets.symmetric(
-                          vertical: 30,
+                          vertical: 50,
                           horizontal: 20,
                         ),
                         child: Center(
                           child: Column(
                             children: [
                               Image.asset(
-                                "assets/main/main_phone1.png",
-                                width: size.width * 0.5,
+                                "assets/main/main_phone2.png",
+                                width: size.width * 0.7,
                               ),
                               const SizedBox(
                                 height: 30,
@@ -479,8 +480,8 @@ class _MainHomePageState extends State<MainHomePage> {
                                       text: "치매 예방 사업에\n",
                                       style: TextStyle(
                                         letterSpacing: -2,
-                                        fontSize: 30,
-                                        fontWeight: FontWeight.w800,
+                                        fontSize: 40,
+                                        fontWeight: FontWeight.w900,
                                         color: Colors.grey.shade900,
                                       ),
                                       children: [
@@ -518,8 +519,8 @@ class _MainHomePageState extends State<MainHomePage> {
                                             });
                                           },
                                           child: Container(
-                                            width: 150,
-                                            height: 35,
+                                            width: 230,
+                                            height: 40,
                                             decoration: BoxDecoration(
                                               borderRadius:
                                                   BorderRadius.circular(50),
@@ -536,7 +537,7 @@ class _MainHomePageState extends State<MainHomePage> {
                                               children: [
                                                 FaIcon(
                                                   FontAwesomeIcons.googlePlay,
-                                                  size: 15,
+                                                  size: 17,
                                                   color: _hoverDownload == 0
                                                       ? Colors.white
                                                       : Colors.grey.shade900,
@@ -547,7 +548,7 @@ class _MainHomePageState extends State<MainHomePage> {
                                                 Text(
                                                   "구글 플레이스토어",
                                                   style: TextStyle(
-                                                    fontSize: 10,
+                                                    fontSize: 17,
                                                     color: _hoverDownload == 0
                                                         ? Colors.white
                                                         : Colors.grey.shade900,
@@ -576,8 +577,8 @@ class _MainHomePageState extends State<MainHomePage> {
                                             });
                                           },
                                           child: Container(
-                                            width: 150,
-                                            height: 35,
+                                            width: 230,
+                                            height: 40,
                                             decoration: BoxDecoration(
                                               borderRadius:
                                                   BorderRadius.circular(50),
@@ -593,7 +594,7 @@ class _MainHomePageState extends State<MainHomePage> {
                                                   MainAxisAlignment.center,
                                               children: [
                                                 FaIcon(FontAwesomeIcons.apple,
-                                                    size: 15,
+                                                    size: 17,
                                                     color: _hoverDownload == 1
                                                         ? Colors.white
                                                         : Colors.grey.shade900),
@@ -603,7 +604,7 @@ class _MainHomePageState extends State<MainHomePage> {
                                                 Text(
                                                   "iOS 앱스토어",
                                                   style: TextStyle(
-                                                      fontSize: 10,
+                                                      fontSize: 17,
                                                       color: _hoverDownload == 1
                                                           ? Colors.white
                                                           : Colors
@@ -658,7 +659,7 @@ class _MainHomePageState extends State<MainHomePage> {
                             mainAxisSize: MainAxisSize.min,
                             children: [
                               Image.asset(
-                                "assets/main/main_phone1.png",
+                                "assets/main/main_phone2.png",
                                 width: size.width * 0.4,
                               ),
                               const SizedBox(
