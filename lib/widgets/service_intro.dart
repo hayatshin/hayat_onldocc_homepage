@@ -74,7 +74,7 @@ class _ServiceIntroState extends State<ServiceIntro> {
                   child: const Text(
                     "사용하기 어렵고 혼자 하는 치매 예방은 이제 그만!",
                     style: TextStyle(
-                      fontSize: 18,
+                      fontSize: 14,
                       fontWeight: FontWeight.w300,
                     ),
                   ),

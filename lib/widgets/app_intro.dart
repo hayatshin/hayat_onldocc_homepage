@@ -245,68 +245,71 @@ class _AppIntroState extends State<AppIntro> {
                     child: SizedBox(
                       width: size.width * 0.8,
                       height: 200,
-                      child: Row(
-                        children: [
-                          Image.asset(
-                            "assets/service_detail/ai_chat.png",
-                            fit: BoxFit.cover,
-                          ).animate().fadeIn(
-                                begin: 0,
-                                duration: 1.seconds,
-                              ),
-                          const SizedBox(
-                            width: 20,
-                          ),
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              RichText(
-                                text: const TextSpan(
-                                  text: "시니어들은\n접근하기 어려운\n",
-                                  style: TextStyle(
-                                    fontSize: 12,
-                                    fontWeight: FontWeight.w400,
-                                  ),
-                                  children: [
-                                    TextSpan(
-                                      text: "챗GPT, ",
-                                      style: TextStyle(
-                                        fontWeight: FontWeight.w800,
-                                      ),
-                                    ),
-                                    TextSpan(
-                                      text: "AI 기술\n인지케어로\n아주 쉽게 접근하고\n",
-                                    ),
-                                    TextSpan(
-                                      text: "음성",
-                                      style: TextStyle(
-                                        fontWeight: FontWeight.w800,
-                                      ),
-                                    ),
-                                    TextSpan(
-                                      text: "으로도 사용해요.",
-                                    ),
-                                  ],
+                      child: SingleChildScrollView(
+                        scrollDirection: Axis.horizontal,
+                        child: Row(
+                          children: [
+                            Image.asset(
+                              "assets/service_detail/ai_chat.png",
+                              fit: BoxFit.cover,
+                            ).animate().fadeIn(
+                                  begin: 0,
+                                  duration: 1.seconds,
                                 ),
-                              ),
-                              const SizedBox(
-                                height: 10,
-                              ),
-                              Container(
-                                decoration: BoxDecoration(
-                                  color: Colors.yellowAccent.withOpacity(0.2),
-                                ),
-                                child: const Text(
-                                  "질문을 통한 유익한 정보 획득,\n대화를 통한 외로움 해소까지!",
-                                  style: TextStyle(
-                                    fontWeight: FontWeight.w900,
-                                    fontSize: 12,
+                            const SizedBox(
+                              width: 20,
+                            ),
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                RichText(
+                                  text: const TextSpan(
+                                    text: "시니어들은\n접근하기 어려운\n",
+                                    style: TextStyle(
+                                      fontSize: 12,
+                                      fontWeight: FontWeight.w400,
+                                    ),
+                                    children: [
+                                      TextSpan(
+                                        text: "챗GPT, ",
+                                        style: TextStyle(
+                                          fontWeight: FontWeight.w800,
+                                        ),
+                                      ),
+                                      TextSpan(
+                                        text: "AI 기술\n인지케어로\n아주 쉽게 접근하고\n",
+                                      ),
+                                      TextSpan(
+                                        text: "음성",
+                                        style: TextStyle(
+                                          fontWeight: FontWeight.w800,
+                                        ),
+                                      ),
+                                      TextSpan(
+                                        text: "으로도 사용해요.",
+                                      ),
+                                    ],
                                   ),
                                 ),
-                              ),
-                            ],
-                          ),
-                        ],
+                                const SizedBox(
+                                  height: 10,
+                                ),
+                                Container(
+                                  decoration: BoxDecoration(
+                                    color: Colors.yellowAccent.withOpacity(0.2),
+                                  ),
+                                  child: const Text(
+                                    "질문을 통한 유익한 정보 획득,\n대화를 통한 외로움 해소까지!",
+                                    style: TextStyle(
+                                      fontWeight: FontWeight.w900,
+                                      fontSize: 12,
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                   ),
@@ -316,106 +319,111 @@ class _AppIntroState extends State<AppIntro> {
                         mainAxisSize: MainAxisSize.min,
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Column(
-                                crossAxisAlignment: CrossAxisAlignment.center,
-                                children: [
-                                  Text(
-                                    "일기 피드백",
-                                    style: TextStyle(
-                                      color: Theme.of(context).primaryColor,
-                                      fontWeight: FontWeight.w900,
-                                      fontSize: 10,
+                          SingleChildScrollView(
+                            scrollDirection: Axis.horizontal,
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Column(
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  children: [
+                                    Text(
+                                      "일기 피드백",
+                                      style: TextStyle(
+                                        color: Theme.of(context).primaryColor,
+                                        fontWeight: FontWeight.w900,
+                                        fontSize: 10,
+                                      ),
                                     ),
-                                  ),
-                                  const SizedBox(
-                                    height: 20,
-                                  ),
-                                  RichText(
-                                    text: const TextSpan(
-                                      text: "시니어의 오늘 ",
-                                      style: TextStyle(fontSize: 12),
+                                    const SizedBox(
+                                      height: 20,
+                                    ),
+                                    RichText(
+                                      text: const TextSpan(
+                                        text: "시니어의 오늘 ",
+                                        style: TextStyle(fontSize: 12),
+                                        children: [
+                                          TextSpan(
+                                            text: "4가지 활동",
+                                            style: TextStyle(
+                                              fontWeight: FontWeight.w800,
+                                            ),
+                                          ),
+                                          TextSpan(
+                                            text: "에 대해\n하나, 하나 체크하며 ",
+                                          ),
+                                          TextSpan(
+                                            text: "동기를 부여",
+                                            style: TextStyle(
+                                              fontWeight: FontWeight.w800,
+                                            ),
+                                          ),
+                                          TextSpan(
+                                            text: "합니다.",
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                    const SizedBox(
+                                      height: 30,
+                                    ),
+                                    Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.spaceBetween,
                                       children: [
-                                        TextSpan(
-                                          text: "4가지 활동",
-                                          style: TextStyle(
-                                            fontWeight: FontWeight.w800,
+                                        SizedBox(
+                                          height: 150,
+                                          child: Image.asset(
+                                            "assets/service_detail/feedback1.png",
                                           ),
+                                        ).animate().fadeIn(
+                                              begin: 0,
+                                              duration: 1.seconds,
+                                            ),
+                                        const SizedBox(
+                                          width: 10,
                                         ),
-                                        TextSpan(
-                                          text: "에 대해\n하나, 하나 체크하며 ",
-                                        ),
-                                        TextSpan(
-                                          text: "동기를 부여",
-                                          style: TextStyle(
-                                            fontWeight: FontWeight.w800,
+                                        SizedBox(
+                                          height: 150,
+                                          child: Image.asset(
+                                            "assets/service_detail/feedback2.png",
                                           ),
+                                        )
+                                            .animate(delay: 500.milliseconds)
+                                            .fadeIn(
+                                              begin: 0,
+                                              duration: 1.seconds,
+                                            ),
+                                        const SizedBox(
+                                          width: 10,
                                         ),
-                                        TextSpan(
-                                          text: "합니다.",
+                                        SizedBox(
+                                          height: 150,
+                                          child: Image.asset(
+                                            "assets/service_detail/feedback3.png",
+                                          ),
+                                        ).animate(delay: 1.seconds).fadeIn(
+                                              begin: 0,
+                                              duration: 1.seconds,
+                                            ),
+                                        const SizedBox(
+                                          width: 10,
                                         ),
+                                        SizedBox(
+                                          height: 150,
+                                          child: Image.asset(
+                                            "assets/service_detail/feedback4.png",
+                                          ),
+                                        ).animate(delay: 1.5.seconds).fadeIn(
+                                              begin: 0,
+                                              duration: 1.seconds,
+                                            ),
                                       ],
-                                    ),
-                                  ),
-                                  const SizedBox(
-                                    height: 30,
-                                  ),
-                                  Row(
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceBetween,
-                                    children: [
-                                      SizedBox(
-                                        height: 150,
-                                        child: Image.asset(
-                                          "assets/service_detail/feedback1.png",
-                                        ),
-                                      ).animate().fadeIn(
-                                            begin: 0,
-                                            duration: 1.seconds,
-                                          ),
-                                      const SizedBox(
-                                        width: 10,
-                                      ),
-                                      SizedBox(
-                                        height: 150,
-                                        child: Image.asset(
-                                          "assets/service_detail/feedback2.png",
-                                        ),
-                                      ).animate(delay: 500.milliseconds).fadeIn(
-                                            begin: 0,
-                                            duration: 1.seconds,
-                                          ),
-                                      const SizedBox(
-                                        width: 10,
-                                      ),
-                                      SizedBox(
-                                        height: 150,
-                                        child: Image.asset(
-                                          "assets/service_detail/feedback3.png",
-                                        ),
-                                      ).animate(delay: 1.seconds).fadeIn(
-                                            begin: 0,
-                                            duration: 1.seconds,
-                                          ),
-                                      const SizedBox(
-                                        width: 10,
-                                      ),
-                                      SizedBox(
-                                        height: 150,
-                                        child: Image.asset(
-                                          "assets/service_detail/feedback4.png",
-                                        ),
-                                      ).animate(delay: 1.5.seconds).fadeIn(
-                                            begin: 0,
-                                            duration: 1.seconds,
-                                          ),
-                                    ],
-                                  )
-                                ],
-                              ),
-                            ],
+                                    )
+                                  ],
+                                ),
+                              ],
+                            ),
                           ),
                           const SizedBox(
                             height: 60,

@@ -190,7 +190,7 @@ class _MainHomePageState extends State<MainHomePage> {
                             child: Text(
                               "인지케어",
                               style: TextStyle(
-                                fontSize: 18,
+                                fontSize: 16,
                                 fontWeight: _hoverTabNavInt == 0
                                     ? FontWeight.w800
                                     : FontWeight.w400,
@@ -218,7 +218,7 @@ class _MainHomePageState extends State<MainHomePage> {
                             child: Text(
                               "서비스 소개",
                               style: TextStyle(
-                                fontSize: 18,
+                                fontSize: 16,
                                 fontWeight: _hoverTabNavInt == 1
                                     ? FontWeight.w800
                                     : FontWeight.w400,
@@ -246,7 +246,7 @@ class _MainHomePageState extends State<MainHomePage> {
                             child: Text(
                               "앱 소개",
                               style: TextStyle(
-                                fontSize: 18,
+                                fontSize: 16,
                                 fontWeight: _hoverTabNavInt == 2
                                     ? FontWeight.w800
                                     : FontWeight.w400,
@@ -276,7 +276,7 @@ class _MainHomePageState extends State<MainHomePage> {
                             child: Text(
                               "계약 문의",
                               style: TextStyle(
-                                fontSize: 18,
+                                fontSize: 16,
                                 fontWeight: _hoverTabNavInt == 3
                                     ? FontWeight.w800
                                     : FontWeight.w400,

@@ -60,7 +60,7 @@ class Footer extends StatelessWidget {
                     vertical: 30,
                     horizontal: 30,
                   ),
-                  child: Row(
+                  child: Column(
                     mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
@@ -81,10 +81,10 @@ class Footer extends StatelessWidget {
                         ),
                       ),
                       const SizedBox(
-                        width: 20,
+                        height: 20,
                       ),
                       const Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
+                        crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
                           Text(
                             "인지케어",
@@ -106,7 +106,7 @@ class Footer extends StatelessWidget {
                         ],
                       ),
                       const SizedBox(
-                        width: 50,
+                        height: 30,
                       ),
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -116,8 +116,8 @@ class Footer extends StatelessWidget {
                             child: MouseRegion(
                               cursor: SystemMouseCursors.click,
                               child: Container(
-                                width: 120,
-                                height: 30,
+                                width: 150,
+                                height: 35,
                                 decoration: BoxDecoration(
                                   border: Border.all(
                                     color: Colors.white,
@@ -129,16 +129,16 @@ class Footer extends StatelessWidget {
                                   children: [
                                     FaIcon(
                                       FontAwesomeIcons.googlePlay,
-                                      size: 12,
+                                      size: 13,
                                       color: Colors.white,
                                     ),
                                     SizedBox(
-                                      width: 10,
+                                      width: 12,
                                     ),
                                     Text(
                                       "플레이스토어",
                                       style: TextStyle(
-                                        fontSize: 12,
+                                        fontSize: 13,
                                         color: Colors.white,
                                       ),
                                     ),
@@ -155,8 +155,8 @@ class Footer extends StatelessWidget {
                             child: MouseRegion(
                               cursor: SystemMouseCursors.click,
                               child: Container(
-                                width: 120,
-                                height: 30,
+                                width: 150,
+                                height: 35,
                                 decoration: BoxDecoration(
                                   border: Border.all(
                                     color: Colors.white,
@@ -168,16 +168,16 @@ class Footer extends StatelessWidget {
                                   children: [
                                     FaIcon(
                                       FontAwesomeIcons.apple,
-                                      size: 12,
+                                      size: 13,
                                       color: Colors.white,
                                     ),
                                     SizedBox(
-                                      width: 10,
+                                      width: 12,
                                     ),
                                     Text(
                                       "앱스토어",
                                       style: TextStyle(
-                                        fontSize: 12,
+                                        fontSize: 13,
                                         color: Colors.white,
                                       ),
                                     )
