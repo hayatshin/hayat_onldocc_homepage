@@ -42,7 +42,7 @@ class MyApp extends StatelessWidget {
         }
         return null;
       },
-      title: '하야트 | 인지케어',
+      title: '인지케어',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         fontFamily: "NanumSquare",
