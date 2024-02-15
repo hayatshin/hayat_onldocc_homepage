@@ -19,6 +19,7 @@ class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
   // This widget is the root of your application.
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -77,9 +78,59 @@ class _MainHomePageState extends State<MainHomePage> {
 
   final ScrollController _scrollController = ScrollController();
 
+  void _showJPNews(BuildContext context) {
+    showDialog(
+        context: context,
+        builder: (BuildContext context) {
+          return AlertDialog(
+            backgroundColor: Colors.white,
+            surfaceTintColor: Colors.transparent,
+            title: Text(
+              "인지케어 뉴스",
+              style: TextStyle(
+                fontSize: 20,
+                fontWeight: FontWeight.w600,
+                color: Theme.of(context).primaryColor,
+              ),
+            ),
+            content: Container(
+              color: Colors.white,
+              child: Image.asset(
+                "assets/main/jp_news.png",
+              ),
+            ),
+            actions: [
+              TextButton(
+                  onPressed: () {
+                    Navigator.of(context).pop();
+                  },
+                  child: const Padding(
+                    padding: EdgeInsets.symmetric(
+                      vertical: 10,
+                      horizontal: 20,
+                    ),
+                    child: Text(
+                      "닫기",
+                      style: TextStyle(
+                        fontSize: 15,
+                        color: Colors.black,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  )),
+            ],
+          );
+        });
+  }
+
   @override
   void initState() {
     super.initState();
+
+    WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
+      _showJPNews(context);
+    });
+    // _showJPNews();
   }
 
   @override
@@ -108,7 +159,7 @@ class _MainHomePageState extends State<MainHomePage> {
     try {
       await launchUrl(andoridUrl);
     } catch (e) {
-      print(e);
+      if (!mounted) return;
       ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
         showCloseIcon: true,
         content: Text(
@@ -127,6 +178,7 @@ class _MainHomePageState extends State<MainHomePage> {
     try {
       await launchUrl(iosUrl);
     } catch (e) {
+      if (!mounted) return;
       ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
         content: Text(
           "링크가 열리지 않습니다.",
