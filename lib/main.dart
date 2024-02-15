@@ -78,6 +78,12 @@ class _MainHomePageState extends State<MainHomePage> {
 
   final ScrollController _scrollController = ScrollController();
 
+  Future<void> _launchURL() async {
+    const urlString = "https://www.news1.kr/articles/5298763";
+    final url = Uri.parse(urlString);
+    if (!await launchUrl(url, mode: LaunchMode.inAppBrowserView)) {}
+  }
+
   void _showJPNews(BuildContext context) {
     showDialog(
         context: context,
@@ -101,23 +107,43 @@ class _MainHomePageState extends State<MainHomePage> {
             ),
             actions: [
               TextButton(
-                  onPressed: () {
-                    Navigator.of(context).pop();
-                  },
-                  child: const Padding(
-                    padding: EdgeInsets.symmetric(
-                      vertical: 10,
-                      horizontal: 20,
+                onPressed: () {
+                  _launchURL();
+                },
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(
+                    vertical: 10,
+                    horizontal: 20,
+                  ),
+                  child: Text(
+                    "뉴스 보기",
+                    style: TextStyle(
+                      fontSize: 15,
+                      color: Theme.of(context).primaryColor,
+                      fontWeight: FontWeight.w900,
                     ),
-                    child: Text(
-                      "닫기",
-                      style: TextStyle(
-                        fontSize: 15,
-                        color: Colors.black,
-                        fontWeight: FontWeight.bold,
-                      ),
+                  ),
+                ),
+              ),
+              TextButton(
+                onPressed: () {
+                  Navigator.of(context).pop();
+                },
+                child: const Padding(
+                  padding: EdgeInsets.symmetric(
+                    vertical: 10,
+                    horizontal: 20,
+                  ),
+                  child: Text(
+                    "닫기",
+                    style: TextStyle(
+                      fontSize: 15,
+                      color: Colors.black,
+                      fontWeight: FontWeight.bold,
                     ),
-                  )),
+                  ),
+                ),
+              ),
             ],
           );
         });
