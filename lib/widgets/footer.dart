@@ -206,7 +206,7 @@ class Footer extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       const Text(
-                        "(주)하야트",
+                        "주식회사 하야트랩스",
                         style: TextStyle(
                           fontSize: 10,
                           fontWeight: FontWeight.w600,
@@ -282,7 +282,7 @@ class Footer extends StatelessWidget {
                         height: 10,
                       ),
                       Text(
-                        "Copyright © ${DateTime.now().year} 하야트 | All rights reserved.",
+                        "Copyright © ${DateTime.now().year} 하야트랩스 | All rights reserved.",
                         style: const TextStyle(
                           fontSize: 7,
                           fontWeight: FontWeight.w200,
@@ -451,7 +451,7 @@ class Footer extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       const Text(
-                        "(주)하야트",
+                        "주식회사 하야트랩스",
                         style: TextStyle(
                           fontSize: 18,
                           fontWeight: FontWeight.w600,
@@ -527,7 +527,7 @@ class Footer extends StatelessWidget {
                         height: 20,
                       ),
                       Text(
-                        "Copyright © ${DateTime.now().year} 하야트 | All rights reserved.",
+                        "Copyright © ${DateTime.now().year} 하야트랩스 | All rights reserved.",
                         style: const TextStyle(
                           fontSize: 13,
                           fontWeight: FontWeight.w200,

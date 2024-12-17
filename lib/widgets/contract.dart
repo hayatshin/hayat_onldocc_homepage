@@ -158,7 +158,7 @@ class _ContractState extends State<Contract> {
                           height: 10,
                         ),
                         const Text(
-                          "아래 내용을 남겨주시면 하야트 고객센터에서 순차적으로 연락드리겠습니다.",
+                          "아래 내용을 남겨주시면 하야트랩스 고객센터에서 순차적으로 연락드리겠습니다.",
                           style: TextStyle(
                             fontSize: 14,
                             fontWeight: FontWeight.w600,
@@ -584,7 +584,7 @@ class _ContractState extends State<Contract> {
                           height: 20,
                         ),
                         const Text(
-                          "아래 내용을 남겨주시면 하야트 고객센터에서 순차적으로 연락드리겠습니다.",
+                          "아래 내용을 남겨주시면 하야트랩스 고객센터에서 순차적으로 연락드리겠습니다.",
                           style: TextStyle(
                             fontSize: 20,
                             fontWeight: FontWeight.w600,
